@@ -36,6 +36,9 @@
     <Content Include="Member.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="middlewire\logger.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="package.json" />
     <Content Include="static\index.html">
       <SubType>Code</SubType>
@@ -46,6 +49,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="middlewire\" />
     <Folder Include="static\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
