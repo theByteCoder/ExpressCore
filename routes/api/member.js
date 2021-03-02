@@ -34,7 +34,6 @@ router.post('/', (req, res) => {
 })
 
 // update member
-// get single members
 router.put('/:id', (req, res) => {
     const id = req.params.id;
     const found = members.some(member => member.id === parseInt(id));
@@ -48,6 +47,18 @@ router.put('/:id', (req, res) => {
             }
         })
         res.json(members.filter((member) => member.id === parseInt(id)))
+    } else {
+        res.status(400).json({ msg: `Id ${id} not found` });
+    }
+    res.json()
+});
+
+// delete member
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    const found = members.some(member => member.id === parseInt(id));
+    if (found) {
+        res.json({ msg: `Id ${id} deleted`, members: members.filter((member) => member.id !== parseInt(id)) })
     } else {
         res.status(400).json({ msg: `Id ${id} not found` });
     }
