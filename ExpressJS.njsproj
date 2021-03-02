@@ -30,6 +30,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="routes\api\member.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="index.js">
       <SubType>Code</SubType>
     </Content>
@@ -50,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="middlewire\" />
+    <Folder Include="routes\api\" />
+    <Folder Include="routes\" />
     <Folder Include="static\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
